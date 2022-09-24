@@ -1,7 +1,10 @@
 package nc.kevintrochon.springcourses.controller;
 
-import nc.kevintrochon.springcourses.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+import nc.kevintrochon.springcourses.services.GreetingService;
+@Controller
 public class ConstructorInjectedController {
 	private final GreetingService greetingService;
 
@@ -12,7 +15,7 @@ public class ConstructorInjectedController {
 		this.greetingService = greetingService;
 	}
 	
-	public String sayGreeting() {
+	public String getGreeting() {
 		return greetingService.sayGreeting();
 	}
 }
