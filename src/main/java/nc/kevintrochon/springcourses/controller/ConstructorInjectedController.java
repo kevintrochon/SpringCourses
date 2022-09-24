@@ -1,6 +1,6 @@
 package nc.kevintrochon.springcourses.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import nc.kevintrochon.springcourses.services.GreetingService;
@@ -11,7 +11,7 @@ public class ConstructorInjectedController {
 	/**
 	 * @param greetingService
 	 */
-	public ConstructorInjectedController(GreetingService greetingService) {
+	public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 	

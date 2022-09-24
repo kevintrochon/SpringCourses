@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import nc.kevintrochon.springcourses.controller.ConstructorInjectedController;
-import nc.kevintrochon.springcourses.services.GreetingServiceImpl;
+import nc.kevintrochon.springcourses.services.ConstructorGreetingService;
 
 /**
  * @author Utilisateur
@@ -24,7 +24,7 @@ class ConstructorInjectedControllerTest {
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
-		controller = new ConstructorInjectedController(new GreetingServiceImpl());
+		controller = new ConstructorInjectedController(new ConstructorGreetingService());
 		
 	}
 
