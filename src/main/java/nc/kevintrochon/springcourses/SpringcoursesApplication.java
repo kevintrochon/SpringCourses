@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import nc.kevintrochon.springcourses.controller.ConstructorInjectedController;
+import nc.kevintrochon.springcourses.controller.I18nController;
 import nc.kevintrochon.springcourses.controller.MyController;
 import nc.kevintrochon.springcourses.controller.PropertyInjectedController;
 import nc.kevintrochon.springcourses.controller.StterInjectedController;
@@ -15,6 +16,9 @@ public class SpringcoursesApplication {
 	public static void main(String[] args) {
 	  ApplicationContext ctx = SpringApplication.run(SpringcoursesApplication.class, args);
 	  MyController myController = (MyController) ctx.getBean("myController");
+	  I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+	  
+	  System.out.println(i18nController.sayHello());
 	  
 	  System.out.println("--------Primary Bean------");
 	  System.out.println(myController.sayHello());
