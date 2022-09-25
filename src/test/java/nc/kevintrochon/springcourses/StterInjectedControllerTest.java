@@ -30,7 +30,7 @@ class StterInjectedControllerTest {
 
 	@Test
 	void test() {
-		System.out.println(controller.sayGreeting());
+		System.out.println(controller.getGreeting());
 	}
 
 }

@@ -33,7 +33,7 @@ class ConstructorInjectedControllerTest {
 	 */
 	@Test
 	void testConstructorInjectedController() {
-		System.out.println(controller.sayGreeting());
+		System.out.println(controller.getGreeting());
 	}
 
 }
