@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import nc.kevintrochon.springcourses.controller.ConstructorInjectedController;
 import nc.kevintrochon.springcourses.controller.I18nController;
 import nc.kevintrochon.springcourses.controller.MyController;
+import nc.kevintrochon.springcourses.controller.PetController;
 import nc.kevintrochon.springcourses.controller.PropertyInjectedController;
 import nc.kevintrochon.springcourses.controller.StterInjectedController;
 
@@ -17,6 +18,10 @@ public class SpringcoursesApplication {
 	  ApplicationContext ctx = SpringApplication.run(SpringcoursesApplication.class, args);
 	  MyController myController = (MyController) ctx.getBean("myController");
 	  I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+	  
+	  PetController petController = ctx.getBean("petController", PetController.class);
+	  System.out.println("--- The Best Pet is ---");
+	  System.out.println(petController.whichPetIsTheBest());
 	  
 	  System.out.println(i18nController.sayHello());
 	  
